@@ -51,6 +51,7 @@ h3 {
 .titles {
   position: absolute;
   left: 50%;
+  z-index: 1;
 
   p{
     font-family: "DM Sans";

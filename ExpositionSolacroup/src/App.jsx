@@ -1,32 +1,40 @@
 import { BrowserRouter, Route, Routes } from 'react-router'
 import './App.css'
-import { Cursor } from './Components/Cursor/Cursor'
+import { createContext, useState } from 'react'
+import { Header } from './Components/Header/Header'
+import { Home } from './Pages/Home'
+import { Menu } from './Components/Menu/Menu'
+import { Error404 } from './Pages/Error404/Error404'
+
+export const Context = createContext()
+
+function Provider({ children }) {
+  const [loading, setLoading] = useState(true)
+  return (
+    <Context.Provider value={loading}>
+      {children}
+    </Context.Provider>
+  )
+}
+
+fetch('ExpositionSolacroup/SiteContent.json')
+  .then(res => res.json())
+  .then(data => console.log(data.quote))
+  .catch(err => console.error(`Error: ${err}`))
 
 function App() {
-
-
-
   return (
-
-    <Cursor />
-
-    // <BrowserRouter>
-    //   <Routes>
-    //     <Route path='/' element={<Home />} />
-    //     <Route path='/menu' element={<Menu />} />
-    //   </Routes>
-    // </BrowserRouter>
-
-
-    // <>
-    // <section  className='landing-screen'>
-    //   <div className='titles'>
-    //     <h1>Marie-Thérèse<br />SOLACROUP</h1>
-    //     <p>Une vie au service des autres</p>
-    //   </div>
-    //   {/* <video src='ExpositionSolacroup/public/WINK-WINK-Anim.mp4' alt='winkwink'></video> */}
-    // </section>
-    // </>
+    <>
+    <Home />
+    {/* <BrowserRouter>
+      <Header />
+      <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route path='/menu' element={<Menu />} />
+          <Route element={Error404} /> 
+      </Routes>
+    </BrowserRouter> */}
+    </>
   )
 }
 

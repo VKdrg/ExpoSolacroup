@@ -2,6 +2,7 @@
 
 #cursor-follow{
     border: 1px solid var(--mid-blue);
+    border-radius: 24px;
     height: 32px;
     width: 32px;
     align-self: center;
