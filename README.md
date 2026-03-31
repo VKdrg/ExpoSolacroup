@@ -1,6 +1,11 @@
 # Exposition Solacroup
 Intégration de la version digitale de l'exposition sur Marie-Thérèse Solacroup, pour la Fondation Solacroup Hébert.
 
+## Modif du contenu du site
+## Cloning & Repo access
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
