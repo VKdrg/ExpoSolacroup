@@ -1,41 +1,36 @@
-import { BrowserRouter, Route, Routes } from 'react-router'
-import './App.css'
 import { createContext, useState } from 'react'
-import { Header } from './Components/Header/Header'
+import './App.css'
 import { Home } from './Pages/Home'
-import { Menu } from './Components/Menu/Menu'
+import { Header } from './Pages/Header/Header'
 import { Error404 } from './Pages/Error404/Error404'
+import { BrowserRouter, Route, Routes } from 'react-router'
 
-export const Context = createContext()
+// export const Context = createContext()
 
-function Provider({ children }) {
-  const [loading, setLoading] = useState(true)
+// function Provider({ children }) {
+//   const [loading, setLoading] = useState(true)
+//   const [chapters, setChapters] = useState([])
+
+//   fetch('ExpositionSolacroup/SiteContent.json')
+//     .then(res => res.json())
+//     .then(data => setChapters(data))
+//     .catch(err => console.error(`Error: ${err}`))
+
+//   return (
+//     <Context.Provider value={{ loading, chapters }}>
+//       {children}
+//     </Context.Provider>
+//   )
+// }
+
+
+export function App() {
   return (
-    <Context.Provider value={loading}>
-      {children}
-    </Context.Provider>
-  )
-}
-
-fetch('ExpositionSolacroup/SiteContent.json')
-  .then(res => res.json())
-  .then(data => console.log(data.quote))
-  .catch(err => console.error(`Error: ${err}`))
-
-function App() {
-  return (
-    <>
-    <Home />
-    {/* <BrowserRouter>
+    <BrowserRouter>
       <Header />
       <Routes>
-          <Route exact path='/' element={<Home />} />
-          <Route path='/menu' element={<Menu />} />
-          <Route element={Error404} /> 
+        <Route path='/' element={<Home />} />
       </Routes>
-    </BrowserRouter> */}
-    </>
+    </BrowserRouter>
   )
 }
-
-export default App

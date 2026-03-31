@@ -1,14 +1,16 @@
 import { Link } from "react-router";
 
 export function Menu() {
+
+    
     return (
         <section id="MenuSection">
             <h1>CHAPITRES</h1>
             <p className="close body1">FERMER</p>
             <div id="menuCore">
                 <Link>
-                    <p> { chapterNumber } </p>
-                    <p> { chapterTitle } </p>
+                    {/* <p className=""> { chapterNumber } </p>
+                    <p className=""> { chapterTitle } </p> */}
                 </Link>
             </div>
             <div id="btmLinks">
