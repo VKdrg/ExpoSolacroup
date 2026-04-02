@@ -4,6 +4,7 @@ import { Home } from './Pages/Home'
 import { Error404 } from './Pages/Error404/Error404'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import { Header } from './Components/Header/Header'
+import { Loader } from './Components/Loader/Loader'
 
 // export const Context = createContext()
 
@@ -29,8 +30,8 @@ export function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path='/' element={<Loader />} />
-        <Route path='/home' element={<Home />} />
+        <Route path='/' element={<Home />} />
+        {/* <Route path='/home' element={<Home />} /> */}
       </Routes>
     </BrowserRouter>
   )
