@@ -1,7 +1,8 @@
 import { Link, NavLink, useLocation } from 'react-router';
 import './Header.css'
-import { Menu } from '../../Pages/Menu/Menu';
+import { Menu } from '../Menu/Menu';
 import { useEffect } from 'react';
+import { Home } from '../../Pages/Home';
 
 export function Header() {
 
@@ -9,8 +10,8 @@ export function Header() {
     const location = useLocation();
 
     useEffect(() => {
-        if(location.pathname === "/home") {
-
+        if (location.pathname === "/home") {
+            icon = 'ExpositionSolacroup/src/assets/logoLightExtended.svg'
         }
     }, [])
     // switch (key) {
@@ -25,12 +26,16 @@ export function Header() {
     return (
         <>
             <nav className='nav-desktop'>
-                <img src={icon} alt="blason du chateau et logo de la fondation Solacroup-Hébert" />
-                <Link to="" className='body1'>MENU</Link>
+                <Link to="/home">
+                    <img src={icon} alt="blason du chateau et logo de la fondation Solacroup-Hébert" />
+                </Link>
+                <Link to="/menu" className='body1'>MENU</Link>
             </nav>
 
             <nav className='nav-mobile'>
-                <img src={icon} alt="blason du chateau et logo de la fondation Solacroup-Hébert" />
+                <Link to="/home">
+                    <img src={icon} alt="blason du chateau et logo de la fondation Solacroup-Hébert" />
+                </Link>
                 <i>burger</i>
             </nav>
         </>

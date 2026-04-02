@@ -1,9 +1,9 @@
 import { createContext, useState } from 'react'
 import './App.css'
 import { Home } from './Pages/Home'
-import { Header } from './Pages/Header/Header'
 import { Error404 } from './Pages/Error404/Error404'
 import { BrowserRouter, Route, Routes } from 'react-router'
+import { Header } from './Components/Header/Header'
 
 // export const Context = createContext()
 
@@ -29,7 +29,8 @@ export function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Loader />} />
+        <Route path='/home' element={<Home />} />
       </Routes>
     </BrowserRouter>
   )

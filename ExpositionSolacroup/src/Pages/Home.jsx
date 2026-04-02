@@ -1,14 +1,16 @@
+import './Home.css'
+
 export function Home() {
 
     return (
         <>
-            <section className='landing-screen'>
+            <section id='landing-screen'>
                 <div className='titles'>
                     <h1>Marie-Thérèse<br />SOLACROUP</h1>
                     <p>UNE VIE AU SERVICE DES AUTRES</p>
                 </div>
-                <video width="920" height="1080" autoPlay muted>
-                    <source src="WINK-WINK-Anim.mp4" type="video/mp4" />
+                <video autoPlay muted>
+                    <source src="Animation-clin-d-oeil.mp4" type="video/mp4" />
                 </video>
             </section>
         </>
