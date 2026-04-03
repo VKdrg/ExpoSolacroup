@@ -1,43 +1,38 @@
-import { Link, NavLink, useLocation } from 'react-router';
-import './Header.css'
-import { Menu } from '../Menu/Menu';
-import { useEffect } from 'react';
-import { Home } from '../../Pages/Home';
+import '/src/index.css';
+import './Header.css';
+
+import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router';
+
 
 export function Header() {
 
-    let icon = 'ExpositionSolacroup/src/assets/logoLightReduced.svg';
+    const [icon, setIcon] = useState('/logoLightReduced.svg');
     const location = useLocation();
 
     useEffect(() => {
-        if (location.pathname === "/home") {
-            icon = 'ExpositionSolacroup/src/assets/logoLightExtended.svg'
+        if (location.pathname === "/") {
+            setIcon('/logoLightExtended.svg')
         }
     }, [])
-    // switch (key) {
-    //     case value:
-
-    //         break;
-
-    //     default:
-    //         break;
-    // }
 
     return (
         <>
             <nav className='nav-desktop'>
-                <Link to="/home">
+                <Link to="/">
                     <img src={icon} alt="blason du chateau et logo de la fondation Solacroup-Hébert" />
                 </Link>
-                <Link to="/menu" className='body1'>MENU</Link>
+                <p className='body1'>MENU</p>
             </nav>
 
             <nav className='nav-mobile'>
-                <Link to="/home">
+                <Link to="/">
                     <img src={icon} alt="blason du chateau et logo de la fondation Solacroup-Hébert" />
                 </Link>
-                <i>burger</i>
+                <icon className="body1">☰</icon>
+                {/* <i className="fa-solid fa-bars body1">☰</i> */}
             </nav>
         </>
     )
 }
+

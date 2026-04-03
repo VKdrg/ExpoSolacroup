@@ -1,10 +1,9 @@
-import { createContext, useState } from 'react'
-import './App.css'
-import { Home } from './Pages/Home'
-import { Error404 } from './Pages/Error404/Error404'
 import { BrowserRouter, Route, Routes } from 'react-router'
+import './App.css'
 import { Header } from './Components/Header/Header'
-import { Loader } from './Components/Loader/Loader'
+import { Menu } from './Components/Menu/Menu'
+import { Home } from './Pages/Home'
+import { Layout } from './Components/Layout/Layout'
 
 // export const Context = createContext()
 
@@ -28,10 +27,11 @@ import { Loader } from './Components/Loader/Loader'
 export function App() {
   return (
     <BrowserRouter>
-      <Header />
       <Routes>
-        <Route path='/' element={<Home />} />
-        {/* <Route path='/home' element={<Home />} /> */}
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path='/menu' element={<Menu />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )

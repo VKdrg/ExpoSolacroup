@@ -7,6 +7,10 @@ nav {
     padding-inline: 12.4rem;
     padding-top: 4rem;
     z-index: 99;
+
+    img{
+        height: 4rem;
+    }
 }
 
 .nav-desktop {
@@ -20,4 +24,26 @@ nav {
 .body1 {
     text-decoration: none;
     color: var(--beige);
+}
+
+@media screen and (width<1025px) {
+    nav{
+        padding-inline: 2.4rem;
+        padding-top: 1.6rem;
+    }
+
+    .nav-desktop{
+        display: none;
+    }
+
+    .nav-mobile {
+        display: flex;
+        width: 100vw;
+        justify-content: space-between;
+        z-index: 99;
+
+        icon{
+            font-size: 4rem;
+        }
+    }
 }

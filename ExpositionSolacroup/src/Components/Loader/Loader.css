@@ -23,3 +23,9 @@ main {
     background-color: var(--light-blue);
     transition: width 1s;
 }
+
+@media screen and (width<1025px) {
+    #loader {
+        width: 60%;
+    }
+}
