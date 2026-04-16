@@ -70,12 +70,13 @@ video {
 @media screen and (width<400px) {
     h1{
         font-size: 4rem;
+        filter: drop-shadow( 0 0 10px --dark-blue);
     }
 
     video {
-        max-width: 350%;
-        left: -65%;
-        bottom: -3.2rem;
+        max-width: 300%;
+        left: -55%;
+        bottom: 3rem;
     }
 
     .titles {

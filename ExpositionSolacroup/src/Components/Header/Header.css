@@ -1,24 +1,24 @@
 nav {
     position: fixed;
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: space-between;
     align-items: center;
-    padding-inline: 12.4rem;
+    padding-inline: clamp(1.6rem, -0.3417rem + 8.2848vw, 12.4rem);
     padding-top: 4rem;
-    z-index: 99;
+    z-index: 95;
 
-    img{
+    img {
         height: 4rem;
     }
 }
 
 .nav-desktop {
     display: flex;
-}
 
-.nav-mobile {
-    display: none;
+    .modal {
+        top: -100vh;
+    }
 }
 
 .body1 {
@@ -26,13 +26,28 @@ nav {
     color: var(--beige);
 }
 
+.modal {
+    transition: top 0.9s;
+    background-color: var(--dark-blue);
+    /* mix-blend-mode: multiply; */
+    height: 100vh;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+}
+
+.change-modal {
+    top: 0;
+}
+/* 
 @media screen and (width<1025px) {
-    nav{
+    nav {
         padding-inline: 2.4rem;
         padding-top: 1.6rem;
     }
 
-    .nav-desktop{
+    .nav-desktop {
         display: none;
     }
 
@@ -42,8 +57,8 @@ nav {
         justify-content: space-between;
         z-index: 99;
 
-        icon{
+        i {
             font-size: 4rem;
         }
     }
-}
+} */

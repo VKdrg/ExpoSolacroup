@@ -1,7 +1,7 @@
 {
-    "exposition": [
+    "chapters": [
         {
-            "chapterNumber": 1,
+            "number": 1,
             "title": "L'enfance de Marie-Thérèse Solacroup",
             "subtitle": "La naissance d'une femme hors norme",
             "imgDesktop": "",
@@ -14,7 +14,7 @@
             }
         },
         {
-            "chapterNumber": 2,
+            "number": 2,
             "title": "En première ligne, le courage des femmes invisibles",
             "subtitle": "Femmes invisibles, héroïnes de l'ombre",
             "imgDesktop": "",
@@ -27,7 +27,7 @@
             }
         },
         {
-            "chapterNumber": 3,
+            "number": 3,
             "title": "Une voix dans un monde d'hommes",
             "subtitle": "15 ans au service de la ville de Dinard",
             "imgDesktop": "",
@@ -40,7 +40,7 @@
             }
         },
         {
-            "chapterNumber": 4,
+            "number": 4,
             "title": "De la maison familiale,",
             "subtitle": "au cœur d'un engagement pour l'enfance et la jeunesse",
             "imgDesktop": "",
@@ -53,7 +53,7 @@
             }
         },
         {
-            "chapterNumber": 5,
+            "number": 5,
             "title": "Une femme, un lieu, une transmission",
             "subtitle": "De 1968 à aujourd'hui",
             "imgDesktop": "",

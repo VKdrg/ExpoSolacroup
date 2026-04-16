@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router'
 import './App.css'
 import { Header } from './Components/Header/Header'
-import { Menu } from './Components/Menu/Menu'
+// import { Menu } from './Components/Menu/Menu'
 import { Home } from './Pages/Home'
 import { Layout } from './Components/Layout/Layout'
 
@@ -30,7 +30,7 @@ export function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path='/menu' element={<Menu />} />
+          {/* <Route path='/menu' element={<Menu />} /> */}
         </Route>
       </Routes>
     </BrowserRouter>
