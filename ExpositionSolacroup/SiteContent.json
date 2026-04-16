@@ -1,7 +1,7 @@
 {
     "chapters": [
         {
-            "number": 1,
+            "id": 1,
             "title": "L'enfance de Marie-Thérèse Solacroup",
             "subtitle": "La naissance d'une femme hors norme",
             "imgDesktop": "",
@@ -11,10 +11,11 @@
                 "col1": "Marie-Thérèse Solacroup naît en 1892, avant-dernière d’une fratrie de huit enfants, au sein d’une famille bourgeoise aisée : son père, Émile, est polytechnicien et ingénieur des Ponts ; sa mère, Marie Hébert, est issue d’un milieu d’affaires et d’industrie.",
                 "col2": "Dans ce foyer rigoureux, l’éducation est soignée mais stricte, parfois étouffante. Pourtant, déjà, Marie-Thérèse se distingue par son intelligence vive, sa liberté d’esprit et son énergie courageuse, qualités qui marqueront toute son existence.",
                 "col3": "À une époque où l’avenir des jeunes filles de bonne famille se limitait le plus souvent à devenir épouse et mère, elle choisira une autre voie : celle de l’indépendance et de l’engagement."
-            }
+            },
+            "audio": ""
         },
         {
-            "number": 2,
+            "id": 2,
             "title": "En première ligne, le courage des femmes invisibles",
             "subtitle": "Femmes invisibles, héroïnes de l'ombre",
             "imgDesktop": "",
@@ -24,10 +25,11 @@
                 "col1": "Pendant les deux guerres mondiales, Marie-Thérèse Solacroup n’est pas restée spectatrice. Elle est venue en aide aux blessés, a soutenu les familles éprouvées et a participé activement à la Résistance en participant à l’évasion d’aviateurs alliés.",
                 "col2": "Son courage a été salué par plusieurs décorations, parmi lesquelles la Médaille de la Reconnaissance française, la Médaille des épidémies, les Palmes d’argent, le titre de Chevalier du Mérite social, ainsi que des témoignages de reconnaissance du Secrétariat général de la Défense passive et diverses médailles d’honneur pour services rendus lors des bombardements en région parisienne.",
                 "col3": "Ces périodes de bouleversements ont profondément transformé la société et le rôle des femmes."
-            }
+            },
+            "audio": ""
         },
         {
-            "number": 3,
+            "id": 3,
             "title": "Une voix dans un monde d'hommes",
             "subtitle": "15 ans au service de la ville de Dinard",
             "imgDesktop": "",
@@ -37,10 +39,11 @@
                 "col1": "Dans les années 1960, Marie-Thérèse Solacroup siège comme seule femme au Conseil municipal de Dinard.",
                 "col2": "À une époque où la politique était « une affaire d’hommes », elle impose sa voix, préside une commission et défend ses convictions avec détermination. Son engagement n’était pas symbolique : il ouvrait la voie à une représentation encore trop rare.",
                 "col3": "Aujourd’hui, les femmes occupent 42,4 % des sièges municipaux, mais seulement 20,8 % sont maires — preuve qu’il reste encore du chemin à parcourir."
-            }
+            },
+            "audio": ""
         },
         {
-            "number": 4,
+            "id": 4,
             "title": "De la maison familiale,",
             "subtitle": "au cœur d'un engagement pour l'enfance et la jeunesse",
             "imgDesktop": "",
@@ -50,10 +53,11 @@
                 "col1": "Si Mademoiselle Solacroup n’a pas fondé de famille, elle en a créé une à sa manière. En 1947, elle hérite du domaine familial, et décide de le transformer son domaine en un lieu d’accueil pour les plus fragiles.",
                 "col2": "L’aérium marin Notre-Dame-du-Roc ouvre ses portes le 15 mai 1950 : agréé par la Sécurité sociale, il accueille chaque année jusqu’à 70 jeunes filles de 6 à 19 ans, venues trouver santé, éducation et réconfort au bord de la mer.",
                 "col3": "Convaincue du pouvoir de l’attention et de l’éducation, Marie-Thérèse ouvre sa maison à celles qui en avaient le plus besoin."
-            }
+            },
+            "audio": ""
         },
         {
-            "number": 5,
+            "id": 5,
             "title": "Une femme, un lieu, une transmission",
             "subtitle": "De 1968 à aujourd'hui",
             "imgDesktop": "",
@@ -63,7 +67,8 @@
                 "col1": "Le mot \u00AB matrimoine \u00BB — l’héritage transmis par les femmes — a longtemps existé aux côtés du patrimoine, littéralement l’héritage des pères. Mais au XIXe siècle, il a presque disparu, effaçant symboliquement la place des femmes dans l’histoire.",
                 "col2": "Aujourd’hui, il retrouve sa force grâce à des figures comme Marie-Thérèse Solacroup. Son héritage a donné naissance à la Fondation Solacroup-Hébert, qui fait vivre sa vision et ses engagements. Préserver sa mémoire, c’est transmettre ce matrimoine précieux aux générations futures.",
                 "col3": "Elle lègue plus qu’un lieu : elle transmet un héritage féminin, souvent oublié des récits officiels."
-            }
+            },
+            "audio": ""
         }
     ]
 }
