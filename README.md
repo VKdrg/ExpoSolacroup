@@ -1,40 +1,80 @@
 # Exposition Solacroup
 Intégration de la version digitale de l'exposition sur Marie-Thérèse Solacroup, pour la Fondation Solacroup Hébert.
 
-
-### Sur Windows
-### Sur Mac
-### Sur Linux
-
 ## Installer le projet
 ### Prérequis :
-- Avoir un éditeur de code installé (VS Code ou équivalent)
+- Avoir un éditeur de code à jour installé (VS Code ou équivalent)
 
-bash ```
-npm run dev
+### Pour Windows
+1. Sans dossier
+    - Ouvrir VS Code. 
+    - Dans le menu Explorer (première icone en haut à gauche), puis cliquer Clone Repository.
+    - Coller l'URL du projet dans la zone de texte ( https://github.com/VKdrg/ExpoSolacroup.git )
+
+2. Avec dossier
+    - Dans l'Explorateur de Fichiers Windows, créer un nouveau dossier
+    - Ouvrir VS Code.
+    - Dans VS Code, ouvrir un terminal (Terminal > New Terminal ou Ctrl+Shift+ù)
+    - Dans ce terminal, coller la commande suivante :
+```sh
+git clone https://github.com/VKdrg/ExpoSolacroup.git
+```
+
+### Pour Mac
+1. Sans dossier
+    - Ouvrir VS Code. 
+    - Dans le menu Explorer (première icone en haut à gauche), puis cliquer Clone Repository.
+    - Coller l'URL du projet dans la zone de texte ( https://github.com/VKdrg/ExpoSolacroup.git )
+
+2. Avec dossier
+    - Dans l'appli Fichers, créer un nouveau dossier
+    - Ouvrir VS Code.
+    - Dans VS Code, ouvrir un terminal (Terminal > New Terminal ou )
+    - Dans ce terminal, coller la commande suivante :
+```sh
+git clone https://github.com/VKdrg/ExpoSolacroup.git
 ```
 
 
-### Win
-
 ## Lancer le projet
-## Modifier le contenu // Ajouter/Supprimer des chapitres
+### Pour Windows et Mac
+- Dans le terminal VS Code, taper la commande suivante :
+```sh
+npm run dev
+```
+- Ctrl+Cliquer le lien LocalHost pour l'ouvrir dans un navigateur, ou copier-coller l'url dans la barre de recherche d'un navigateur au choix ( idéalement Chrome ou Firefox )
+
+### Erreurs possibles et comment y remédier
+#### Erreurs liées au git
+1. 
+
+#### Erreurs liées à npm
+1. Si le terminal retourne "Error : npm command not found", taper la commande suivante :
+```sh
+npm i 
+```
+Une fois npm installé, relancer la commande qui a provoqué l'erreur.
+
+2. si le terminal retourne "Error : missing script "dev"", taper la commande suivante :
+```sh
+cd .\ExpositionSolacroup\
+```
+Une fois déplacé dans le dossier parent au fichier des scripts, relancer la commande qui à provoqué l'erreur.
+
+
+## Modifier le contenu du site
+### Remarques
+- la syntaxe du fichier ("clé": "valeur") ne peut pas être changée, seule la valeur peut changer
+- les clés entre "" ne doivent pas être changées
+- toujours mettre les clés et valeurs entre double guillemets ("")
+
+### Chapitres
+1. les chapitres sont délimités par des accolades, et séparés par une virgule. 
 
 
 
-## React + Vite
+1. Modifier un chapitre existant
+    - Dans le fichier SiteContent.json, sélectionner puis modifier la valeur à changer. 
+    - Ouvrir la preview web avec la commande "npm run dev", les modifications apparaissent.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-### React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-### Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. 
