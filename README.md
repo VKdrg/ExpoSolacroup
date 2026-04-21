@@ -3,16 +3,17 @@ Intégration de la version digitale de l'exposition sur Marie-Thérèse Solacrou
 
 ## Installer le projet
 ### Prérequis :
+- Avoir un système d'exploitation à jour.
 - Avoir un éditeur de code à jour installé (VS Code ou équivalent)
 
-### Pour Windows
+### Installation
 1. Sans dossier
     - Ouvrir VS Code. 
     - Dans le menu Explorer (première icone en haut à gauche), puis cliquer Clone Repository.
     - Coller l'URL du projet dans la zone de texte ( https://github.com/VKdrg/ExpoSolacroup.git )
 
 2. Avec dossier
-    - Dans l'Explorateur de Fichiers Windows, créer un nouveau dossier
+    - Dans l'Explorateur de Fichiers (Windows), ou dans Finder (Mac), créer un nouveau dossier
     - Ouvrir VS Code.
     - Dans VS Code, ouvrir un terminal (Terminal > New Terminal ou Ctrl+Shift+ù)
     - Dans ce terminal, coller la commande suivante :
@@ -20,24 +21,9 @@ Intégration de la version digitale de l'exposition sur Marie-Thérèse Solacrou
 git clone https://github.com/VKdrg/ExpoSolacroup.git
 ```
 
-### Pour Mac
-1. Sans dossier
-    - Ouvrir VS Code. 
-    - Dans le menu Explorer (première icone en haut à gauche), puis cliquer Clone Repository.
-    - Coller l'URL du projet dans la zone de texte ( https://github.com/VKdrg/ExpoSolacroup.git )
-
-2. Avec dossier
-    - Dans l'appli Fichers, créer un nouveau dossier
-    - Ouvrir VS Code.
-    - Dans VS Code, ouvrir un terminal (Terminal > New Terminal ou )
-    - Dans ce terminal, coller la commande suivante :
-```sh
-git clone https://github.com/VKdrg/ExpoSolacroup.git
-```
-
 
 ## Lancer le projet
-### Pour Windows et Mac
+<!-- ### Pour Windows et Mac -->
 - Dans le terminal VS Code, taper la commande suivante :
 ```sh
 npm run dev
@@ -45,10 +31,6 @@ npm run dev
 - Ctrl+Cliquer le lien LocalHost pour l'ouvrir dans un navigateur, ou copier-coller l'url dans la barre de recherche d'un navigateur au choix ( idéalement Chrome ou Firefox )
 
 ### Erreurs possibles et comment y remédier
-#### Erreurs liées au git
-1. 
-
-#### Erreurs liées à npm
 1. Si le terminal retourne "Error : npm command not found", taper la commande suivante :
 ```sh
 npm i 
@@ -64,12 +46,19 @@ Une fois déplacé dans le dossier parent au fichier des scripts, relancer la co
 
 ## Modifier le contenu du site
 ### Remarques
-- la syntaxe du fichier ("clé": "valeur") ne peut pas être changée, seule la valeur peut changer
-- les clés entre "" ne doivent pas être changées
+- la syntaxe du fichier ("clé": "valeur") ne peut pas être changée
+- les clés ne peuvent pas être changées
 - toujours mettre les clés et valeurs entre double guillemets ("")
 
 ### Chapitres
-1. les chapitres sont délimités par des accolades, et séparés par une virgule. 
+1. les chapitres sont délimités par des accolades, et séparés par une virgule.
+-> contenu
+-> img
+-> audios
+
+### Menu
+
+
 
 
 
