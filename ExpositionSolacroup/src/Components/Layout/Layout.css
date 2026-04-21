@@ -1,0 +1,46 @@
+.modal {
+    display: flex;
+    flex-direction: column;
+    transition: top 0.9s;
+    background-color: var(--dark-blue);
+    background-blend-mode: multiply;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    position: relative;
+    left: 0;
+    padding-inline: clamp(2.4rem, 0.3221rem + 7.7315vw, 9.6rem);
+    padding-top: clamp(2.4rem, 2.0117rem + 1.657vw, 4rem);
+    padding-bottom: 4rem;
+    justify-content: space-between;
+}
+
+h3 {
+    color: var(--beige);
+    font-size: 2.4rem;
+    text-align: center;
+    margin-top: 9.6rem;
+}
+
+#closeMenu {
+    cursor: pointer;
+    width: fit-content;
+    position: absolute;
+    right: 9.6rem;
+}
+
+#list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: fit-content;
+    align-self: center;
+}
+
+#btmLinks {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-self: flex-end;
+}

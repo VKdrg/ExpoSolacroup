@@ -1,0 +1,27 @@
+.links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 2.4rem;
+    height: fit-content;
+}
+
+.ChNb {
+    font-size: 5.6rem;
+    line-height: 100%;
+    width: 4.4rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.links .body1 {
+    font-weight: 200;
+    padding-block: 2.2rem;
+}
+
+@media screen and (width<500px) {
+    .links .body1 {
+        padding-block: 0.8rem;
+    }
+}

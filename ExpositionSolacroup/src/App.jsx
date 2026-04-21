@@ -1,38 +1,52 @@
+import { createContext, useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import './App.css'
-import { Header } from './Components/Header/Header'
-// import { Menu } from './Components/Menu/Menu'
-import { Home } from './Pages/Home'
 import { Layout } from './Components/Layout/Layout'
+import { Home } from './Pages/Home'
+import { ChapterCover } from './Pages/ChapterCover/ChapterCover'
 
-// export const Context = createContext()
+export const Context = createContext()
 
-// function Provider({ children }) {
-//   const [loading, setLoading] = useState(true)
-//   const [chapters, setChapters] = useState([])
+function Provider({ children }) {
+  const [chapters, setChapters] = useState({})
 
-//   fetch('ExpositionSolacroup/SiteContent.json')
-//     .then(res => res.json())
-//     .then(data => setChapters(data))
-//     .catch(err => console.error(`Error: ${err}`))
+  useEffect(() => {
+    fetch('/SiteContent.json')
+      .then(res => res.json())
+      .then(data => setChapters(data.chapters))
+      .catch(err => console.error(`Error : ${err}`))
+  }, [])
 
-//   return (
-//     <Context.Provider value={{ loading, chapters }}>
-//       {children}
-//     </Context.Provider>
-//   )
-// }
+  return (
+    <Context.Provider value={{ chapters }}>
+      {children}
+    </Context.Provider>
+  )
+}
 
 
 export function App() {
+
+  const [chapters, setChapters] = useState({})
+
+  useEffect(() => {
+    fetch('/SiteContent.json')
+      .then(res => res.json())
+      .then(data => setChapters(data.chapters))
+      .catch(err => console.error(`Error : ${err}`))
+  }, [])
+
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Layout />}>
-          <Route index element={<Home />} />
-          {/* <Route path='/menu' element={<Menu />} /> */}
-        </Route>
-      </Routes>
+      <Provider>
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path={`/chapter-${chapters.id}`} element={<ChapterCover />} />
+            {/* Route loop chapters cover, item, details */}
+          </Route>
+        </Routes>
+      </Provider>
     </BrowserRouter>
   )
 }

@@ -74,9 +74,9 @@ video {
     }
 
     video {
-        max-width: 300%;
+        max-width: 320%;
         left: -55%;
-        bottom: 3rem;
+        bottom: 0;
     }
 
     .titles {

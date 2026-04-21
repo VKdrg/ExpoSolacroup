@@ -5,7 +5,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding-inline: clamp(1.6rem, -0.3417rem + 8.2848vw, 12.4rem);
-    padding-top: 4rem;
+    padding-top: clamp(2.4rem, 2.0117rem + 1.657vw, 4rem);
     z-index: 95;
 
     img {
@@ -26,39 +26,8 @@ nav {
     color: var(--beige);
 }
 
-.modal {
-    transition: top 0.9s;
-    background-color: var(--dark-blue);
-    /* mix-blend-mode: multiply; */
-    height: 100vh;
-    position: fixed;
-    top: -100vh;
-    left: 0;
-    width: 100%;
+@media screen and (width<500px) {
+    nav img {
+        height: 3.2rem;
+    }
 }
-
-.change-modal {
-    top: 0;
-}
-/* 
-@media screen and (width<1025px) {
-    nav {
-        padding-inline: 2.4rem;
-        padding-top: 1.6rem;
-    }
-
-    .nav-desktop {
-        display: none;
-    }
-
-    .nav-mobile {
-        display: flex;
-        width: 100vw;
-        justify-content: space-between;
-        z-index: 99;
-
-        i {
-            font-size: 4rem;
-        }
-    }
-} */

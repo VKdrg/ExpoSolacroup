@@ -9,7 +9,7 @@
 }
 
 :root {
-  font-family: "DM Sans", Helvetica, Arial, sans-serif;
+  font-family: "DM Sans", system-ui, sans-serif;
 
   --dark-blue: #13102D;
   --mid-blue: #3B2FA4;
@@ -59,6 +59,20 @@ a {
   cursor: pointer;
 }
 
-@media screen and (width<1025px) {
+/* 
 
+button {
+  z-index: 98;
+  text-orientation: sideways;
+
+} 
+
+.btndiv {
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  bottom: 4rem;
+  height: fit-content;
 }
+  
+*/

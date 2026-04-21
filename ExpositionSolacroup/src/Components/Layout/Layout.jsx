@@ -1,12 +1,46 @@
-import { Outlet } from "react-router";
-import { Header } from "../Header/Header";
+import './Layout.css';
 
-export function Layout() {
+import { useEffect, useState } from "react";
+import { Link, Outlet } from "react-router";
+import { Header } from "../Header/Header";
+import { MenuItem } from "../MenuItems/MenuItems"
+
+export const Layout = ({ robert }) => {
+    const [menuBurger, setMenuBurger] = useState(false)
+    const [chapters, setChapters] = useState([])
+
+    useEffect(() => {
+        fetch('/SiteContent.json')
+            .then(res => res.json())
+            .then(data => setChapters(data.chapters))
+            .catch(err => console.error(`Error : ${err}`))
+    }, [])
+
+    function triggerMenu() {
+        setMenuBurger(prev => !prev)
+    }
 
     return (
         <>
-            <Header />
-            <Outlet />
+            {menuBurger ?
+                <div className="modal">
+                    <a className="body1" id='closeMenu' onClick={triggerMenu}>FERMER</a>
+                    <h3>CHAPITRES</h3>
+                    <div id='list'>
+                        {chapters.map(c => <MenuItem key={c.id} chapter={c} />)}
+                    </div>
+                    <div id="btmLinks">
+                        <Link to={'https://www.instagram.com/fondationsolacrouphebert/'}>Instagram</Link>
+                        <Link to={'https://fondation-solacroup-hebert.com/'}>Site de la Fondation</Link>
+                        <Link to={'https://www.facebook.com/fondationsolacrouphebert'}>Facebook</Link>
+                    </div>
+                </div>
+                :
+                <>
+                    <Header triggerMenu={triggerMenu} />
+                    <Outlet />
+                </>
+            }
         </>
     )
 }

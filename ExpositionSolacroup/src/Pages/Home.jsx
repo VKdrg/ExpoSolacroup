@@ -36,6 +36,7 @@ export function Home() {
                     <h1>Marie-Thérèse<br />SOLACROUP</h1>
                     <p>UNE VIE AU SERVICE DES AUTRES</p>
                 </div>
+                {/* <div className='btndiv'><button>suivant</button></div> */}
                 <DelayedVideo />
             </section>
         </>
