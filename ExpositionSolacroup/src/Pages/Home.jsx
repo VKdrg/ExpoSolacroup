@@ -29,7 +29,7 @@ function DelayedVideo() {
 export function Home() {
 
     return (
-        <>
+        <main>
             <Loader />
             <section id='landing-screen'>
                 <div className='titles'>
@@ -39,6 +39,6 @@ export function Home() {
                 {/* <div className='btndiv'><button>suivant</button></div> */}
                 <DelayedVideo />
             </section>
-        </>
+        </main>
     )
 }

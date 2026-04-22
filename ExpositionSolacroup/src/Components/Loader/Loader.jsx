@@ -17,22 +17,20 @@ export function Loader() {
     useEffect(() => {
         if (filled === 100) {
             setTimeout(() => {
-                document.querySelector('main').style.display = 'none'
+                document.getElementById('loader-screen').style.display = "none"
             }, 1200);
         }
     }, [filled, setLoading])
 
     return (
-        <>
-            <main>
-                <div id='loader'>
-                    <div
-                        id='progressbar'
-                        style={{ width: `${filled}%` }}
-                    >
-                    </div>
+        <section id='loader-screen'>
+            <div id='loader'>
+                <div
+                    id='progressbar'
+                    style={{ width: `${filled}%` }}
+                >
                 </div>
-            </main>
-        </>
+            </div>
+        </section>
     )
 }
