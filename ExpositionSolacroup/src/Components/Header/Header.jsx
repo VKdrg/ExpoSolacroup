@@ -14,6 +14,10 @@ export const Header = ({ triggerMenu }) => {
         if (location.pathname === "/") {
             setIcon('/logoLightExtended.svg')
         }
+        else if ((location.pathname.includes("/content")) || (location.pathname == "/redirect")) {
+            setIcon('/logoDarkReduced.svg')
+            document.getElementById('menu').style.color = "var(--dark-blue)"
+        }
     }, [])
 
     return (
@@ -22,7 +26,7 @@ export const Header = ({ triggerMenu }) => {
                 <Link to="/">
                     <img src={icon} alt="blason du chateau et logo de la fondation Solacroup-Hébert" />
                 </Link>
-                <Link className='body1' onClick={triggerMenu}>MENU</Link>
+                <Link id='menu' className='body1' onClick={triggerMenu}>MENU</Link>
             </nav>
         </>
     )

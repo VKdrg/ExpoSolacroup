@@ -15,6 +15,7 @@
   --mid-blue: #3B2FA4;
   --light-blue: #E0E6FF;
   --beige: #FFFBDC;
+  --beige-50: #FFFBDC80;
 
 }
 
@@ -28,7 +29,7 @@ h1 {
 h2 {
   font-family: "Beth Ellen";
   color: var(--dark-blue);
-  font-size: 4.8rem;
+  font-size: 4rem;
   line-height: 112%;
 }
 

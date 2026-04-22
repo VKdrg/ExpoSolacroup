@@ -36,7 +36,3 @@ export function Loader() {
         </>
     )
 }
-
-// setTimeout(Loader(), () => {
-//     window.location.replace('/home');
-// }, 5000);

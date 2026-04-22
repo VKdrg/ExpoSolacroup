@@ -1,0 +1,25 @@
+#redirect {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--beige-50);
+    position: relative;
+
+    h3{
+        color: var(--dark-blue);
+        margin-top: 0;
+    }
+
+    a{
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        color: var(--dark-blue);
+        position: absolute;
+        bottom: 8rem;
+    }
+
+    #titles{
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+}
