@@ -24,7 +24,7 @@ export const Layout = ({ robert }) => {
         <>
             {menuBurger ?
                 <div className="modal">
-                    <a className="body1" id='closeMenu' onClick={triggerMenu}>FERMER</a>
+                    <Link className="body1" id='closeMenu' onClick={triggerMenu}>FERMER</Link>
                     <h3>CHAPITRES</h3>
                     <div id='list'>
                         {chapters.map(c => <MenuItem key={c.id} chapter={c} />)}
