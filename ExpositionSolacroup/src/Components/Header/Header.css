@@ -5,7 +5,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding-inline: clamp(1.6rem, -0.3417rem + 8.2848vw, 12.4rem);
-    padding-top: clamp(2.4rem, 2.0117rem + 1.657vw, 4rem);
+    padding-block: clamp(1.6rem, 2.0117rem + 1.657vw, 3.2rem);
     z-index: 95;
 
     img {
@@ -13,7 +13,7 @@ nav {
     }
 }
 
-.nav-desktop {
+#nav {
     display: flex;
 
     .modal {

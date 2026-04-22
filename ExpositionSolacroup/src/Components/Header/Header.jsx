@@ -14,15 +14,18 @@ export const Header = ({ triggerMenu }) => {
         if (location.pathname === "/") {
             setIcon('/logoLightExtended.svg')
         }
-        else if ((location.pathname.includes("/content")) || (location.pathname == "/redirect")) {
+        else if ((location.pathname.includes("/content")) || (location.pathname === "/redirect")) {
             setIcon('/logoDarkReduced.svg')
             document.getElementById('menu').style.color = "var(--dark-blue)"
+        }
+        else if(location.pathname === "/mentions-legales") {
+            document.getElementById('nav').style.backgroundColor = "var(--dark-blue)"
         }
     }, [])
 
     return (
         <>
-            <nav className='nav-desktop'>
+            <nav id='nav'>
                 <Link to="/">
                     <img src={icon} alt="blason du chateau et logo de la fondation Solacroup-Hébert" />
                 </Link>

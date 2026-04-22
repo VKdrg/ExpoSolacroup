@@ -12,9 +12,10 @@ export const ChapterCover = () => {
     }, [])
 
     return (
-        <>
-            <h2>ChapterTitle</h2>
-            <h3>ChapterSubT</h3>
-        </>
+        <main id='chapter-cover'>
+            <h2>{chapters.title}</h2>
+            <h3>{chapters.subtitle}</h3>
+            <button>suivant</button>
+        </main>
     )
 }

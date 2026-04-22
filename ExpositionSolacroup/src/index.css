@@ -19,6 +19,13 @@
 
 }
 
+html {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 h1 {
   font-family: "DM Sans";
   color: var(--beige);
@@ -58,6 +65,11 @@ a {
   font-size: 2rem;
   line-height: 160%;
   cursor: pointer;
+}
+
+button {
+  background-color: var(--mid-blue);
+  color: var(--beige);
 }
 
 /* 

@@ -1,0 +1,7 @@
+#chapter-cover{
+    background-color: var(--beige-50);
+
+    h2, h3 {
+        color: var(--dark-blue);
+    }
+}

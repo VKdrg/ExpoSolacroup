@@ -1,12 +1,15 @@
 import { createContext, useEffect, useState } from 'react'
-import { BrowserRouter, data, Route, Routes } from 'react-router'
-import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router'
 import { Layout } from './Components/Layout/Layout'
-import { Home } from './Pages/Home'
 import { ChapterCover } from './Pages/ChapterCover/ChapterCover'
-import { ChapterItem } from './Pages/ChapterItem/ChapterItem'
 import { ChapterDetail } from './Pages/ChapterDetail/ChapterDetail'
+import { ChapterItem } from './Pages/ChapterItem/ChapterItem'
+import { Home } from './Pages/Home'
 import { Redirect } from './Pages/Redirect/Redirect'
+
+import './App.css'
+import { LegalMentions } from './Pages/LegalMentions/LegalMentions'
+
 
 export const Context = createContext()
 
@@ -29,7 +32,6 @@ function Provider({ children }) {
 
 
 export function App() {
-
   const [chapters, setChapters] = useState({})
 
   useEffect(() => {
@@ -49,10 +51,10 @@ export function App() {
             <Route path={`/chapter-${chapters.id}`} element={<ChapterCover />} />
             <Route path={`/chapter-${chapters.id}/content`} element={<ChapterItem />} />
             <Route path={`/chapter-${chapters.id}/content/details`} element={<ChapterDetail />} />
-            {/* Route loop chapters cover, item, details */}
-            {/* Route Transition */}
+            {/* Routes cover, item, details not working */}
+            {/* Route Transition (?) */}
             <Route path='/redirect' element={<Redirect />} />
-            {/* Route Redirect */}
+            <Route path='/mentions-legales' element={<LegalMentions />} />
           </Route>
         </Routes>
       </Provider>

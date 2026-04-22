@@ -13,10 +13,8 @@ export function ChapterItem({ joe }) {
 
 
     return (
-        <Link to={{ pathname: `/chapter-${chapter.id}/content` }}>
-            <button>Découvrir</button>
-            <img src={`${chapter.imgDesktop}`} alt="" />
-            <img src={`${chapter.imgMobile}`} alt="" />
-        </Link>
+        <>
+            <video src=""></video>
+        </>
     )
 }
