@@ -10,7 +10,7 @@
     position: relative;
     left: 0;
     padding-inline: clamp(2.4rem, 0.3221rem + 7.7315vw, 9.6rem);
-    padding-top: clamp(2.4rem, 2.0117rem + 1.657vw, 4rem);
+    padding-top: clamp(3.2rem, 2.9183rem + 0.9014vw, 4rem);
     padding-bottom: 4rem;
     justify-content: space-between;
 }
@@ -26,7 +26,8 @@ h3 {
     cursor: pointer;
     width: fit-content;
     position: absolute;
-    right: 9.6rem;
+    right: 0;
+    margin-right: clamp(1.6rem, -0.3417rem + 8.2848vw, 12.4rem);
 }
 
 #list {

@@ -36,6 +36,13 @@ video {
     }
 }
 
+@media screen and (width=1440px) {
+    video{
+        max-width: 120%;
+        left: -10%;
+    }
+}
+
 @media screen and (width<1025px) {
     video {
         max-width: 260%;

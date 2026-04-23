@@ -8,26 +8,16 @@ nav {
     padding-block: clamp(1.6rem, 2.0117rem + 1.657vw, 3.2rem);
     z-index: 95;
 
-    img {
-        height: 4rem;
-    }
-}
-
-#nav {
-    display: flex;
-
     .modal {
         top: -100vh;
     }
-}
 
-.body1 {
-    text-decoration: none;
-    color: var(--beige);
-}
+    img {
+        height: clamp(3.2rem, 2.9183rem + 0.9014vw, 4rem);
+    }
 
-@media screen and (width<500px) {
-    nav img {
-        height: 3.2rem;
+    .body1 {
+        text-decoration: none;
+        color: var(--beige);
     }
 }

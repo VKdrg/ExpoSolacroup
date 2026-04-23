@@ -5,7 +5,7 @@ import { Link, Outlet } from "react-router";
 import { Header } from "../Header/Header";
 import { MenuItem } from "../MenuItems/MenuItems"
 
-export const Layout = ({ robert }) => {
+export const Layout = () => {
     const [menuBurger, setMenuBurger] = useState(false)
     const [chapters, setChapters] = useState([])
 

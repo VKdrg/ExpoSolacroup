@@ -1,0 +1,10 @@
+#chapter-detail {
+    h2, h3 {
+        text-align: center;
+    }
+
+    #columns-content{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

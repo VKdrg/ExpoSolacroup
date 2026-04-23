@@ -26,7 +26,7 @@ function DelayedVideo() {
     );
 }
 
-export function Home() {
+export const Home = () => {
 
     return (
         <main>
@@ -36,7 +36,7 @@ export function Home() {
                     <h1>Marie-Thérèse<br />SOLACROUP</h1>
                     <p>UNE VIE AU SERVICE DES AUTRES</p>
                 </div>
-                {/* <div className='btndiv'><button>suivant</button></div> */}
+                {/* <div className='btn-div'><button className='btn-next'>suivant</button></div> */}
                 <DelayedVideo />
             </section>
         </main>

@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 import "./ChapterItem.css"
 
-export function ChapterItem({ joe }) {
+export const ChapterItem = () => {
     const [chapter, setChapter] = useState([])
 
     fetch('/SiteContent.json')
@@ -14,7 +14,14 @@ export function ChapterItem({ joe }) {
 
     return (
         <>
-            <video src=""></video>
+            <button className="btn-discover">Découvrir</button>
+            <button className="btn-next">v</button>
+            <video>
+                <source src={chapter.illuDesktop} />
+            </video>
+            <video>
+                <source src={chapter.illuMobile} />
+            </video>
         </>
     )
 }
