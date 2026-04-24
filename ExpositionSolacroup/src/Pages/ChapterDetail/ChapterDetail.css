@@ -1,4 +1,8 @@
 #chapter-detail {
+    display: flex;
+    flex-direction: column;
+    
+
     h2, h3 {
         text-align: center;
     }

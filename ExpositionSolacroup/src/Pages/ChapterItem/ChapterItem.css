@@ -1,0 +1,21 @@
+#chapter-item {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    
+    .modal-detail {
+        height: 100vh;
+        width: 100%;
+        transition: top 0.8s;
+        position: fixed;
+        left: 0;
+        top: -100vh;
+        background-color: var(--dark-blue);
+        background-blend-mode: multiply;
+        backdrop-filter: blur(16px);
+    }
+
+    .change-modal-detail {
+        top: 0;
+    }
+}

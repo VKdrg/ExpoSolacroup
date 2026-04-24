@@ -15,10 +15,6 @@ export const Transition = () => {
         return () => clearTimeout(timer)
     })
 
-    // setTimeout(Loader(), () => {
-    //     window.location.replace('/home');
-    // }, 5000);
-
     return (
         <video
             ref={transitionRef}
@@ -29,27 +25,3 @@ export const Transition = () => {
         </video>
     )
 }
-
-// function DelayedVideo() {
-//     const videoRef = useRef(null);
-
-//     useEffect(() => {
-//         const timer = setTimeout(() => {
-//             if (videoRef.current) {
-//                 videoRef.current.play();
-//             }
-//         }, 3000);
-
-//         return () => clearTimeout(timer);
-//     }, []);
-
-//     return (
-//         <video
-//             ref={videoRef}
-//             muted
-//             playsInline
-//         >
-//             <source src="Animation-clin-d-oeil.mp4" type="video/mp4" />
-//         </video>
-//     );
-// }

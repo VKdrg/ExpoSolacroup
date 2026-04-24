@@ -30,9 +30,9 @@ export const Layout = () => {
                         {chapters.map(c => <MenuItem key={c.id} chapter={c} />)}
                     </div>
                     <div id="btmLinks">
-                        <Link to={'https://www.instagram.com/fondationsolacrouphebert/'}>Instagram</Link>
-                        <Link to={'https://fondation-solacroup-hebert.com/'}>Site de la Fondation</Link>
-                        <Link to={'https://www.facebook.com/fondationsolacrouphebert'}>Facebook</Link>
+                        <Link to="https://www.instagram.com/fondationsolacrouphebert/">Instagram</Link>
+                        <Link to="https://fondation-solacroup-hebert.com/">Site de la Fondation</Link>
+                        <Link to="https://www.facebook.com/fondationsolacrouphebert">Facebook</Link>
                     </div>
                 </div>
                 :
