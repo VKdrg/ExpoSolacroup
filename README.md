@@ -23,7 +23,7 @@ git clone https://github.com/VKdrg/ExpoSolacroup.git
 
 
 ## Lancer le projet
-<!-- ### Pour Windows et Mac -->
+<!-- Pour Windows et Mac -->
 - Dans le terminal VS Code, taper la commande suivante :
 ```sh
 npm run dev
@@ -46,24 +46,54 @@ Une fois déplacé dans le dossier parent au fichier des scripts, relancer la co
 
 ## Modifier le contenu du site
 ### Remarques
-- la syntaxe du fichier ("clé": "valeur") ne peut pas être changée
-- les clés ne peuvent pas être changées
-- toujours mettre les clés et valeurs entre double guillemets ("")
+- La syntaxe du fichier ("clé": "valeur") ne peut pas être changée
+- Les clés ne peuvent pas être changées
+- Toujours mettre les clés et valeurs entre double guillemets ("")
+- Les chapitres sont délimités par des accolades, et séparés par une virgule.
 
 ### Chapitres
-1. les chapitres sont délimités par des accolades, et séparés par une virgule.
--> contenu
--> img
--> audios
-
-### Menu
-
-
-
-
 
 1. Modifier un chapitre existant
     - Dans le fichier SiteContent.json, sélectionner puis modifier la valeur à changer. 
-    - Ouvrir la preview web avec la commande "npm run dev", les modifications apparaissent.
+    - Lancer le projet pour voir les modifications (cf. partie "Installer le projet").
 
-2. 
+2. Créer un nouveau chapitre
+    - Dans le fichier SiteContent.json, créer un nouveau chapitre vierge, ou copier-coller un chapitre existant
+    ```json
+    {
+        "id": ,
+        "title" : "",
+        "subtitle": "",
+        "illuDesktop":"",
+        "illuMobile": "",
+        "quote": "",    <!-- quotation marks \u00AB \u00BB, linebreak \n -->
+        "content": {
+            "col1": "",
+            "col2": "",
+            "col3": "" 
+        },
+        "audio": ""
+    }
+    ```
+    - Compléter le template ci-dessus ou modifier les valeurs copiées-collées.
+
+
+### Medias
+#### Remplacer un média existant
+1. Remplacer le média dans le dossier public (ExpositionSolacroup/public/)
+
+2. Dans le fichier SiteContent.json, importer l'url du media de cette manière : 
+```json
+"clé": "/nouveau-fichier.extension"
+```
+
+
+### Menu
+1. Modifier un lien du menu
+    - Dans le fichier Layout.jsx, modifier l'url du lien concerné, entre double guillemets ("")
+    - Si nécessaire, modifier le texte d'affichage
+    ```html
+    <Link to="url">Texte d'affichage</Link>
+    ```
+
+2. Créer un lien supplémentaire
