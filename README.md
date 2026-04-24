@@ -28,16 +28,16 @@ git clone https://github.com/VKdrg/ExpoSolacroup.git
 ```sh
 npm run dev
 ```
-- Ctrl+Cliquer le lien LocalHost pour l'ouvrir dans un navigateur, ou copier-coller l'url dans la barre de recherche d'un navigateur au choix ( idéalement Chrome ou Firefox )
+- Ctrl+Cliquer le lien [LocalHost](http://localhost:5173) pour l'ouvrir dans un navigateur, ou copier-coller l'url dans la barre de recherche d'un navigateur au choix ( idéalement Chrome ou Firefox )
 
 ### Erreurs possibles et comment y remédier
-1. Si le terminal retourne "Error : npm command not found", taper la commande suivante :
+1. Si le terminal retourne ``Error : npm command not found``, taper la commande suivante :
 ```sh
 npm i 
 ```
 Une fois npm installé, relancer la commande qui a provoqué l'erreur.
 
-2. si le terminal retourne "Error : missing script "dev"", taper la commande suivante :
+2. si le terminal retourne ``Error : missing script "dev"``, taper la commande suivante :
 ```sh
 cd .\ExpositionSolacroup\
 ```
@@ -46,19 +46,19 @@ Une fois déplacé dans le dossier parent au fichier des scripts, relancer la co
 
 ## Modifier le contenu du site
 ### Remarques
-- La syntaxe du fichier ("clé": "valeur") ne peut pas être changée
+- La syntaxe du fichier (``"clé": "valeur"``) ne peut pas être changée
 - Les clés ne peuvent pas être changées
-- Toujours mettre les clés et valeurs entre double guillemets ("")
+- Toujours mettre les ``clés`` et ``valeurs`` entre double guillemets (""), et les séparer par ":"
 - Les chapitres sont délimités par des accolades, et séparés par une virgule.
 
 ### Chapitres
 
 1. Modifier un chapitre existant
-    - Dans le fichier SiteContent.json, sélectionner puis modifier la valeur à changer. 
+    - Dans le fichier [SiteContent.json](ExpositionSolacroup/SiteContent.json), sélectionner puis modifier la valeur à changer. 
     - Lancer le projet pour voir les modifications (cf. partie "Installer le projet").
 
 2. Créer un nouveau chapitre
-    - Dans le fichier SiteContent.json, créer un nouveau chapitre vierge, ou copier-coller un chapitre existant
+    - Dans le fichier [SiteContent.json](ExpositionSolacroup/SiteContent.json), copier-coller un chapitre existant ou créer un nouveau chapitre vierge, à l'aide du template suivant :
     ```json
     {
         "id": ,
@@ -80,7 +80,7 @@ Une fois déplacé dans le dossier parent au fichier des scripts, relancer la co
 
 ### Medias
 #### Remplacer un média existant
-1. Remplacer le média dans le dossier public (ExpositionSolacroup/public/)
+1. Remplacer le média dans le dossier [public](ExpositionSolacroup/public)
 
 2. Dans le fichier SiteContent.json, importer l'url du media de cette manière : 
 ```json
@@ -90,10 +90,12 @@ Une fois déplacé dans le dossier parent au fichier des scripts, relancer la co
 
 ### Menu
 1. Modifier un lien du menu
-    - Dans le fichier Layout.jsx, modifier l'url du lien concerné, entre double guillemets ("")
+    - Dans le fichier [Layout.jsx](ExpositionSolacroup/src/Components/Layout/Layout.jsx), modifier l'url du lien entre double guillemets ("")
     - Si nécessaire, modifier le texte d'affichage
-    ```html
-    <Link to="url">Texte d'affichage</Link>
-    ```
+```html
+<Link to="url">Texte d'affichage</Link>
+```
 
 2. Créer un lien supplémentaire
+    - Dans le fichier [Layout.jsx](ExpositionSolacroup/src/Components/Layout/Layout.jsx), créer un nouveau lien dans le contenant ``<div id="btm-links"></div>``
+    - Organiser les liens dans l'ordre désiré

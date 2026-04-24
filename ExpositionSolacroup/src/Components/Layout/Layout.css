@@ -38,7 +38,7 @@ h3 {
     align-self: center;
 }
 
-#btmLinks {
+#btm-links {
     display: flex;
     flex-direction: row;
     width: 100%;

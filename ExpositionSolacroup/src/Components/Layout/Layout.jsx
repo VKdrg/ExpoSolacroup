@@ -29,7 +29,7 @@ export const Layout = () => {
                     <div id='list'>
                         {chapters.map(c => <MenuItem key={c.id} chapter={c} />)}
                     </div>
-                    <div id="btmLinks">
+                    <div id="btm-links">
                         <Link to="https://www.instagram.com/fondationsolacrouphebert/">Instagram</Link>
                         <Link to="https://fondation-solacroup-hebert.com/">Site de la Fondation</Link>
                         <Link to="https://www.facebook.com/fondationsolacrouphebert">Facebook</Link>
