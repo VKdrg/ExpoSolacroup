@@ -9,7 +9,7 @@ export const Redirect = () => {
                 <h2>Nos valeurs sont le coeur battant de la Fondation.</h2>
                 <h3>Elles guident chaque action, chaque projet, et chaque réussite.</h3>
             </div>
-            <Link className="body1" href="https://fondation-solacroup-hebert.com/">Retour vers le site principal.</Link>
+            <Link className="btn body1" to="https://fondation-solacroup-hebert.com/">Retour vers le site principal.</Link>
         </ section>
     )
 }

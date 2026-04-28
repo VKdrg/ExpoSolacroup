@@ -1,21 +1,24 @@
+import { UseApplication } from '../../Components/Provider/Provider'
 import './ChapterCover.css'
 
-export const ChapterCover = () => {
+export const ChapterCover = ({ setCover }) => {
+    const { chapters, currentChapter } = UseApplication()
 
-    const [chapters, setChapters] = useState({})
+    function handleClick() {
+        setCover(prev => !prev)
+    }
 
-    useEffect(() => {
-        fetch('/SiteContent.json')
-            .then(res => res.json())
-            .then(data => setChapters(data))
-            .catch(err => console.error(`Error : ${err}`))
-    }, [])
+    // useEffect(() => {
+    //     console.log(currentChapter);
+    // }, [])
 
     return (
-        <main id='chapter-cover'>
-            <h2>{chapters.title}</h2>
-            <h3>{chapters.subtitle}</h3>
-            <button>suivant</button>
-        </main>
+        <section id='chapter-cover'>
+            <h2>{chapters[currentChapter].title}</h2>
+            <h3>{chapters[currentChapter].subtitle}</h3>
+            <div className='div-btn-next'>
+                <button className="btn btn-next" onClick={handleClick}>next</button>
+            </div>
+        </section>
     )
 }

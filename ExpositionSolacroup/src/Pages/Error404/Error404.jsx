@@ -1,8 +1,11 @@
-export function Error404() {
+import "./Error404.css"
+
+export const Error404 = () => {
 
     return (
-        <>
-            <h1>Error 404 - Page introuvable</h1>
-        </>
+        <section id="error404">
+            <h1>Error 404</h1>
+            <h3>Page introuvable</h3>
+        </section>
     )
 }

@@ -1,32 +1,34 @@
+import { useEffect, useState } from "react"
+import { Link } from "react-router"
+// import { changeModal } from "../ChapterItem/ChapterItem"
 
-import { changeModal } from "../ChapterItem/ChapterItem"
 import "./ChapterDetail.css"
+import { UseApplication } from "../../Components/Provider/Provider"
 
 
-export const ChapterDetail = () => {
-    // blue screen (blend-mode : multiply) with title + sub + quote + columns
+export const ChapterDetail = ({ setModal }) => {
+    const { chapters, currentChapter } = UseApplication()
 
-    const [chapter, setChapter] = useState([])
-
-    fetch('/SiteContent.json')
-        .then(res => res.json())
-        .then(data => setChapter(data.chapters))
-        .catch(err => console.error(`Error : ${err}`))
-    
-    const audio = chapter.audio
+    function handleClick() {
+        setModal(prev => !prev)
+    }
 
     return (
         <section id="chapter-detail">
-            <h2>{chapter.title}</h2>
-            <h3>{chapter.subtitle}</h3>
-            <p className="quotes">{chapter.quote}</p>
-            <button className="btn-audio" onClick={audio.play()}>Écouter l'histoire <i class="fa-thin fa-play"></i></button>
-            <div id="columns-content">
-                <p className="body1">{chapter.content.col1}</p>
-                <p className="body1">{chapter.content.col2}</p>
-                <p className="body1">{chapter.content.col3}</p>
+            <div id="titles">
+                <h2>{chapters[0].title}</h2>
+                <h3>{chapters[0].subtitle}</h3>
             </div>
-            <button className="btn-close" onClick={changeModal()}>Fermer</button>
+            <button className="btn" id="btn-play">Écouter l'histoire</button>
+            <p className="quotes">{chapters[0].quote}</p>
+            <div id="columns-content">
+                <p>{chapters[0].content.col1}</p>
+                <p>{chapters[0].content.col2}</p>
+                <p>{chapters[0].content.col3}</p>
+            </div>
+            <div className='div-btn-close'>
+                <button className="btn btn-close" onClick={handleClick}>Fermer</button>
+            </div>
         </section>
     )
 }

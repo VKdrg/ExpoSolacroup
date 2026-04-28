@@ -10,20 +10,12 @@
     padding-inline: clamp(1.6rem, -0.3417rem + 8.2848vw, 9.6rem);
 
 
-    h2 {
-        text-align: center;
-        line-height: 120%;
-    }
-
     h3 {
         color: var(--dark-blue);
         margin-top: 0;
     }
 
     a {
-        text-decoration: underline;
-        text-decoration-thickness: 1px;
-        color: var(--dark-blue);
         position: absolute;
         bottom: 8rem;
         text-align: center;

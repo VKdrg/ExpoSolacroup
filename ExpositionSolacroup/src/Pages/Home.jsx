@@ -1,6 +1,9 @@
 import './Home.css';
 import { useEffect, useRef } from "react";
 import { Loader } from '../Components/Loader/Loader';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router';
+import { UseApplication } from '../Components/Provider/Provider';
 
 function DelayedVideo() {
     const videoRef = useRef(null);
@@ -28,17 +31,19 @@ function DelayedVideo() {
 
 export const Home = () => {
 
+    const { playing, currentChapter } = UseApplication()
+
     return (
-        <main>
-            <Loader />
+        <>
+            {playing && <Loader />}
             <section id='landing-screen'>
                 <div className='titles'>
                     <h1>Marie-Thérèse<br />SOLACROUP</h1>
                     <p>UNE VIE AU SERVICE DES AUTRES</p>
                 </div>
-                {/* <div className='btn-div'><button className='btn-next'>suivant</button></div> */}
+                <div className='div-btn-next'><Link className='btn btn-next' to={{pathname: '/chapter/'+ currentChapter }}>next</Link></div>
                 <DelayedVideo />
             </section>
-        </main>
+        </>
     )
 }

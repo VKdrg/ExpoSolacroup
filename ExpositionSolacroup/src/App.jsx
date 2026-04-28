@@ -1,5 +1,4 @@
-import { createContext, useEffect, useState } from 'react'
-import { BrowserRouter, Route, Routes, useParams } from 'react-router'
+import { BrowserRouter, Route, Routes } from 'react-router'
 import { Layout } from './Components/Layout/Layout'
 import { ChapterCover } from './Pages/ChapterCover/ChapterCover'
 import { ChapterDetail } from './Pages/ChapterDetail/ChapterDetail'
@@ -8,57 +7,28 @@ import { Home } from './Pages/Home'
 import { Redirect } from './Pages/Redirect/Redirect'
 
 import './App.css'
+import { Error404 } from './Pages/Error404/Error404'
 import { LegalMentions } from './Pages/LegalMentions/LegalMentions'
-
-
-export const Context = createContext()
-
-function Provider({ children }) {
-  const [chapters, setChapters] = useState({})
-  const { id } = useParams()
-
-
-  useEffect(() => {
-    fetch('/SiteContent.json')
-      .then(res => res.json())
-      .then(data => setChapters(data.chapters))
-      .catch(err => console.error(`Error : ${err}`))
-  }, [])
-
-  return (
-    <Context.Provider value={{ chapters }}>
-      {children}
-    </Context.Provider>
-  )
-}
+import { AppProvider } from './Components/Provider/Provider'
+import { Chapter } from './Pages/Chapter/Chapter'
 
 
 export function App() {
-  const [chapters, setChapters] = useState({})
-
-  useEffect(() => {
-    fetch('/SiteContent.json')
-      .then(res => res.json())
-      .then(data => setChapters(data.chapters))
-      .catch(err => console.error(`Error : ${err}`))
-  }, [])
-
   return (
     <BrowserRouter>
-      <Provider>
+      <AppProvider>
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path={'/chapter-:id'} element={<ChapterCover />} />
-            <Route path={'/chapter-:id/content'} element={<ChapterItem />} />
-            <Route path={'/chapter-:id/content/details'} element={<ChapterDetail />} />
-            {/* Routes cover, item, details not working */}
-            {/* Route Transition (?) */}
+            <Route path={'/chapter/:id'} element={<Chapter />} />  
+            {/* <Route path={'/chapter/:id/content'} element={<ChapterItem />} /> */}
+            {/* <Route path={'/chapter/:id/detail'} element={<ChapterDetail />} /> be a modal bitch */}
             <Route path='/redirect' element={<Redirect />} />
             <Route path='/mentions-legales' element={<LegalMentions />} />
+            <Route path='*' element={<Error404 />} />
           </Route>
         </Routes>
-      </Provider>
+      </AppProvider>
     </BrowserRouter>
   )
 }

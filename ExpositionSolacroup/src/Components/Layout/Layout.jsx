@@ -4,17 +4,13 @@ import { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router";
 import { Header } from "../Header/Header";
 import { MenuItem } from "../MenuItems/MenuItems"
+import { UseApplication } from '../Provider/Provider';
 
 export const Layout = () => {
-    const [menuBurger, setMenuBurger] = useState(false)
-    const [chapters, setChapters] = useState([])
 
-    useEffect(() => {
-        fetch('/SiteContent.json')
-            .then(res => res.json())
-            .then(data => setChapters(data.chapters))
-            .catch(err => console.error(`Error : ${err}`))
-    }, [])
+    const { chapters } = UseApplication()
+
+    const [menuBurger, setMenuBurger] = useState(false)
 
     function triggerMenu() {
         setMenuBurger(prev => !prev)
@@ -30,9 +26,14 @@ export const Layout = () => {
                         {chapters.map(c => <MenuItem key={c.id} chapter={c} />)}
                     </div>
                     <div id="btm-links">
-                        <Link to="https://www.instagram.com/fondationsolacrouphebert/">Instagram</Link>
+                        <Link to="/mentions-legales">Mentions Légales</Link>
                         <Link to="https://fondation-solacroup-hebert.com/">Site de la Fondation</Link>
-                        <Link to="https://www.facebook.com/fondationsolacrouphebert">Facebook</Link>
+                        <div id='socials'>
+                            <Link to="https://www.instagram.com/fondationsolacrouphebert/"><img src="/SVG/logo-Insta.svg" alt="Logo Instagram" /></Link>
+                            <Link to="https://www.facebook.com/fondationsolacrouphebert/"><img src="/SVG/logo-Fb.svg" alt="logo Facebook" /></Link>
+                            <Link to="https://www.youtube.com/@FondationSolacroupHebert"><img src="/SVG/logo-Yt.svg" alt="logo Youtube" /></Link>
+                            <Link to="https://fr.linkedin.com/company/fondation-solacroup-h%C3%A9bert"><img src="/SVG/logo-in.svg" alt="logo Linkedin" /></Link>
+                        </div>
                     </div>
                 </div>
                 :

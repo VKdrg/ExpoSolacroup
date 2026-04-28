@@ -14,7 +14,7 @@ export const Header = ({ triggerMenu }) => {
         if (location.pathname === "/") {
             setIcon('/logoLightExtended.svg')
         }
-        else if ((location.pathname.includes("/content")) || (location.pathname === "/redirect")) {
+        else if ((location.pathname.includes("/content")) || (location.pathname.includes("/cover")) || (location.pathname === "/redirect")) {
             setIcon('/logoDarkReduced.svg')
             document.getElementById('menu').style.color = "var(--dark-blue)"
         }

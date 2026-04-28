@@ -15,13 +15,15 @@
     font-weight: 700;
 }
 
-.links .body1 {
+.links .p-thin {
+    display: flex;
+    align-items: center;
     font-weight: 200;
-    padding-block: 2.2rem;
+    height: 7.6rem;
 }
 
 @media screen and (width<500px) {
-    .links .body1 {
+    .links p {
         padding-block: 0.8rem;
     }
 }

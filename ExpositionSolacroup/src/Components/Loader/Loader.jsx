@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react';
 import './Loader.css';
+import { UseApplication } from '../Provider/Provider';
 
 export function Loader() {
+
+    const { setPlaying } = UseApplication()
+
     const [loading, setLoading] = useState(true)
     const [filled, setFilled] = useState(0)
 
@@ -15,9 +19,10 @@ export function Loader() {
     }, [filled]);
 
     useEffect(() => {
-        if (filled === 100) {
+        if (filled >= 100) {
             setTimeout(() => {
-                document.getElementById('loader-screen').style.display = "none"
+                setPlaying(false)
+                // document.getElementById('loader-screen').style.display = "none"
             }, 1200);
         }
     }, [filled, setLoading])
