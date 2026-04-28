@@ -98,4 +98,6 @@ Une fois déplacé dans le dossier parent au fichier des scripts, relancer la co
 
 2. Créer un lien supplémentaire
     - Dans le fichier [Layout.jsx](ExpositionSolacroup/src/Components/Layout/Layout.jsx), créer un nouveau lien dans le contenant ``<div id="btm-links"></div>``
-    - Organiser les liens dans l'ordre désiré
+    - Organiser les liens dans l'ordre désiré.
+    
+___
