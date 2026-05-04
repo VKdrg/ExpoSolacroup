@@ -47,7 +47,7 @@
         padding-inline: clamp(2.4rem, -0.4169rem + 9.0141vw, 10.4rem);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 9.6rem;
+        gap: clamp(4rem, 0.4103rem + 7.6581vw, 9.6rem);
         text-align: left;
 
         @media screen and (width<750px) {
