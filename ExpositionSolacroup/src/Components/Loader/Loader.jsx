@@ -22,7 +22,6 @@ export function Loader() {
         if (filled >= 100) {
             setTimeout(() => {
                 setPlaying(false)
-                // document.getElementById('loader-screen').style.display = "none"
             }, 1200);
         }
     }, [filled, setLoading])

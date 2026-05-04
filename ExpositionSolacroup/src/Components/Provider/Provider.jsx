@@ -13,6 +13,7 @@ export const AppProvider = ({ children }) => {
     const [chapters, setChapters] = useState({})
     const [playing, setPlaying] = useState(true)
     const [currentChapter, setCurrentChapter] = useState(1)
+    const [transition, setTransition] = useState(true)
 
     useEffect(() => {
         setLoading(true)

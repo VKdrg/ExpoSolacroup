@@ -4,28 +4,17 @@
     width: 100vw;
     overflow: hidden;
 
-    video {
-        @media screen and (width>1024px) {
-            #illu-desktop {
-                display: flex;
-            }
-
-            #illu-mobile {
-                display: none;
-            }
-        }
-
-        @media screen and (width<1024px) {
-            #illu-desktop {
-                display: none;
-            }
-
-            #illu-mobile {
-                display: flex;
-            }
-        }
+    #video-container {
+        height: 100%;
+        width: 100%;
     }
 
+    video {
+        min-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
 
     .modal-detail {
         height: 100vh;
