@@ -6,6 +6,7 @@
     background-color: var(--dark-blue);
     padding-top: 16rem;
     min-height: 100vh;
+    gap: 4rem;
 
 
     h2,
@@ -24,7 +25,8 @@
 
     .quotes {
         color: var(--beige);
-        padding-inline: clamp(2.4rem, -3.7972rem + 19.831vw, 20rem);
+        padding-inline: clamp(2.4rem, -0.4169rem + 9.0141vw, 10.4rem);
+        text-align: center;
     }
 
     p, i {
