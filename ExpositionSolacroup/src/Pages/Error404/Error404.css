@@ -13,4 +13,9 @@
         color: var(--beige);
         margin: 0;
     }
+
+    .btn {
+        position: absolute;
+        bottom: 6.4rem;
+    }
 }
