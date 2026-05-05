@@ -4,7 +4,7 @@ import "./Redirect.css"
 export const Redirect = () => {
 
     return (
-        <section id="redirect">
+        <section id="redirect-section">
             <div id="titles">
                 <h2>Nos valeurs sont le coeur battant de la Fondation.</h2>
                 <h3>Elles guident chaque action, chaque projet, et chaque réussite.</h3>
