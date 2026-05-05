@@ -79,6 +79,10 @@ a {
   }
 }
 
+.btn {
+  z-index: 98;
+}
+
 .btn-discover {
   background-color: var(--mid-blue);
   color: var(--beige);
