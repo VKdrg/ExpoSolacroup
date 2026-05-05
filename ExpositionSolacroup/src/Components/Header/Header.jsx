@@ -7,15 +7,15 @@ import { Link, useLocation } from 'react-router';
 
 
 export const Header = ({ triggerMenu }) => {
-    const [icon, setIcon] = useState('/logoLightReduced.svg');
+    const [icon, setIcon] = useState('/SVG/logoLightReduced.svg');
     const location = useLocation();
 
     useEffect(() => {
         if (location.pathname === "/") {
-            setIcon('/logoLightExtended.svg')
+            setIcon('/SVG/logoLightExtended.svg')
         }
-        else if ((location.pathname.includes("/chapter")) || (location.pathname === "/redirect")) {
-            setIcon('/logoDarkReduced.svg')
+        else if ((location.pathname.includes("chapter")) || (location.pathname === "/redirect")) {
+            setIcon('/SVG/logoDarkReduced.svg')
             document.getElementById('menu').style.color = "var(--dark-blue)"
         }
         else if(location.pathname === "/mentions-legales") {
