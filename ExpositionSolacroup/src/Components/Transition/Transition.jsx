@@ -1,39 +1,27 @@
 import "./Transition.css"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 
 export const Transition = () => {
     const transitionRef = useRef(null)
-    const { transition } = UseApplication()
-
 
     useEffect(() => {
-        const timerPlay = setTimeout(() => {
+        const timer = setTimeout(() => {
             if (transitionRef.current) {
                 transitionRef.current.play()
             }
-        }, 1)
+        }, 10000)
 
-        const AutoHideVideo = ({ delay = 10000 }) => {
-            useEffect(() => {
-                const timer = setTimeout(() => {
-                    settransi = false
-                }, delay);
-
-                return () => clearTimeout(timer)
-            })
-        }
-
-        return () => clearTimeout(timerPlay)
+        return () => clearTimeout(timer)
     })
 
     return (
-        <video id="transition-video"
+        <video
             ref={transitionRef}
             muted
             playsInline
         >
-            <source src="/transition.mp4" type="video/mp4" />
+            <source src="" type="video/mp4" />
         </video>
     )
 }

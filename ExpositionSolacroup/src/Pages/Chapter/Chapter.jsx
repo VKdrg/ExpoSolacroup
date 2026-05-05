@@ -3,14 +3,13 @@ import { ChapterCover } from "../ChapterCover/ChapterCover"
 import { ChapterDetail } from "../ChapterDetail/ChapterDetail"
 import { ChapterItem } from "../ChapterItem/ChapterItem"
 import { UseApplication } from "../../Components/Provider/Provider"
-import { useNavigate, useParams } from "react-router"
+import { useParams } from "react-router"
 
 export const Chapter = () => {
 
     const { id } = useParams()
 
     const { chapters, currentChapter, setCurrentChapter } = UseApplication()
-    const navigate = useNavigate()
 
     const [cover, setCover] = useState(true)
     const [modal, setModal] = useState(false)
@@ -18,18 +17,11 @@ export const Chapter = () => {
     useEffect(() => {
         const chapter = id
         
-        if(!chapter || chapter < 1) {
-            throw navigate('/404')
+        if (chapter) {
+            setCurrentChapter(chapter-1)
+            setCover(true)
+            setModal(false)
         }
-
-        // if (chapter > 5) {
-        //     throw navigate('/redirect')
-        //     console.log('FUK U');
-        // }
-
-        setCurrentChapter(chapter - 1)
-        setCover(true)
-        setModal(false)
     }, [id])
 
     return (
