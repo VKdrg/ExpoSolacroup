@@ -21,7 +21,7 @@ export const Transition = () => {
             muted
             playsInline
         >
-            <source src="" type="video/mp4" />
+            <source src="/illus/transition.mp4" type="video/mp4" />
         </video>
     )
 }

@@ -8,10 +8,6 @@ export const ChapterCover = ({ setCover }) => {
         setCover(prev => !prev)
     }
 
-    // useEffect(() => {
-    //     console.log(currentChapter);
-    // }, [])
-
     return (
         <section id='chapter-cover'>
             <h2>{chapters[currentChapter].title}</h2>

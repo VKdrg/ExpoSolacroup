@@ -93,7 +93,7 @@ a {
   width: fit-content;
 }
 
-.btn-next {
+.btn-next, .btn-close {
   background-color: var(--mid-blue);
   color: var(--beige);
   font-size: clamp(1.6rem, 1.4592rem + 0.4507vw, 2rem);

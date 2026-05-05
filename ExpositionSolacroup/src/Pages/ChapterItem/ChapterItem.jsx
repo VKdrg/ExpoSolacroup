@@ -24,26 +24,8 @@ export const ChapterItem = ({ setModal }) => {
                 autoPlay
                 loop
                 muted
-                style={{
-                    maxWidth: '102%',
-                    left: '0',
-                    top: '0'
-                }}
             >
-                {/* <source src={chapters[0].illuDesktop} />        refaire les illus desktop en 4:3        */}
-            </video>
-            <video
-                id="illu-mobile"
-                autoPlay
-                loop
-                muted
-                style={{
-                    maxWidth: '125%',
-                    left: '-4rem',
-                    top: '0'
-                }}
-            >
-                {/* <source src={chapters[4].illuMobile} /> */}
+                <source src={chapters[currentChapter].illuDesktop} />
             </video>
         </section >
     )

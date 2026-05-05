@@ -19,13 +19,12 @@ export const ChapterDetail = ({ setModal }) => {
             </div>
 
             <div id="audio-div">
-                {/* <p>Écouter l'histoire</p> */}
                 <audio id="audio"
                     controls
                     controlsList="nodownload"
                     title="Écouter l'histoire"
                 >
-                    <source src={`${chapters[currentChapter].audio}`} type="audio/mp3" />
+                    <source src={`${chapters[Number(currentChapter)].audio}`} type="audio/mp3" />
                 </audio>
             </div>
 
