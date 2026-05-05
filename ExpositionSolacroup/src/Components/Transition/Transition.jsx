@@ -5,23 +5,27 @@ import { useEffect, useRef } from "react";
 export const Transition = () => {
     const transitionRef = useRef(null);
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            if (transitionRef.current) {
-                transitionRef.current.play();
-            }
-        }, 10000);
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //         if (transitionRef.current) {
+    //             transitionRef.current.play();
+    //         }
+    //     }, 10000);
 
-        return () => clearTimeout(timer);
-    })
+    //     return () => clearTimeout(timer);
+    // })
+
+    
 
     return (
-        <video
-            ref={transitionRef}
-            muted
-            playsInline
-        >
-            <source src="/illus/transition.mp4" type="video/mp4" />
-        </video>
+        <section id="transition">
+            <video
+                ref={transitionRef}
+                muted
+                playsInline
+            >
+                <source src="/illus/transition.mp4" type="video/mp4" />
+            </video>
+        </section>
     )
 }

@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import './MenuItems.css'
+import './MenuItems.css';
 
 export const MenuItem = ({ chapter }) => {
     return (

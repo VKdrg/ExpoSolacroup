@@ -3,17 +3,17 @@ import './Layout.css';
 import { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router";
 import { Header } from "../Header/Header";
-import { MenuItem } from "../MenuItems/MenuItems"
+import { MenuItem } from "../MenuItems/MenuItems";
 import { UseApplication } from '../Provider/Provider';
 
 export const Layout = () => {
 
-    const { chapters } = UseApplication()
+    const { chapters } = UseApplication();
 
-    const [menuBurger, setMenuBurger] = useState(false)
+    const [menuBurger, setMenuBurger] = useState(false);
 
     function triggerMenu() {
-        setMenuBurger(prev => !prev)
+        setMenuBurger(prev => !prev);
     }
 
     return (

@@ -13,7 +13,7 @@ export const ChapterCover = ({ setCover }) => {
             <h2>{chapters[currentChapter].title}</h2>
             <h3>{chapters[currentChapter].subtitle}</h3>
             <div className='div-btn-next'>
-                <button className="btn btn-next" onClick={handleClick}>next</button>
+                <button className="btn btn-next" onClick={handleClick}>Continuer</button>
             </div>
         </section>
     )

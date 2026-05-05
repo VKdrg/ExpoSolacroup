@@ -1,4 +1,4 @@
-import "./LegalMentions.css"
+import "./LegalMentions.css";
 
 export const LegalMentions = () => {
 

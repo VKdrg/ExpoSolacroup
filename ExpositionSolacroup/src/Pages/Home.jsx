@@ -31,7 +31,7 @@ function DelayedVideo() {
 
 export const Home = () => {
 
-    const { playing, currentChapter } = UseApplication()
+    const { playing, currentChapter } = UseApplication();
 
     return (
         <>
@@ -41,7 +41,7 @@ export const Home = () => {
                     <h1>Marie-Thérèse<br />SOLACROUP</h1>
                     <p>UNE VIE AU SERVICE DES AUTRES</p>
                 </div>
-                <div className='div-btn-next'><Link className='btn btn-next' to={{pathname: '/chapter/'+ currentChapter }}>next</Link></div>
+                <div className='div-btn-next'><Link className='btn btn-next' to={{pathname: '/chapter/'+ currentChapter }}>Continuer</Link></div>
                 <DelayedVideo />
             </section>
         </>

@@ -17,7 +17,7 @@ export const ChapterItem = ({ setModal }) => {
                 <button className="btn btn-discover" onClick={handleDiscovery}>Découvrir</button>
             </div>
             <div className='div-btn-next'>
-                <Link className="btn btn-next" to={{ pathname: '/chapter/' + (Number(currentChapter)+1) }}>next</Link>
+                <Link className="btn btn-next" to={{ pathname: '/chapter/' + (Number(currentChapter)+1) }}>Continuer</Link>
             </div>
             <video
                 id="illu-desktop"

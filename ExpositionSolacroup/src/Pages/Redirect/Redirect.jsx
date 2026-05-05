@@ -1,5 +1,5 @@
-import { Link } from "react-router"
-import "./Redirect.css"
+import { Link } from "react-router";
+import "./Redirect.css";
 
 export const Redirect = () => {
 

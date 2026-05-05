@@ -4,28 +4,27 @@ import { UseApplication } from '../Provider/Provider';
 
 export function Loader() {
 
-    const { setPlaying } = UseApplication()
+    const { setPlaying } = UseApplication();
 
-    const [loading, setLoading] = useState(true)
-    const [filled, setFilled] = useState(0)
+    const [loading, setLoading] = useState(true);
+    const [filled, setFilled] = useState(0);
 
     useEffect(() => {
         if (filled < 100) {
             const timeout = setTimeout(() => {
-                setFilled(prev => prev + 5)
-            }, 20)
-            return () => clearTimeout(timeout)
+                setFilled(prev => prev + 5);
+            }, 20);
+            return () => clearTimeout(timeout);
         }
     }, [filled]);
 
     useEffect(() => {
         if (filled >= 100) {
             setTimeout(() => {
-                setPlaying(false)
-                // document.getElementById('loader-screen').style.display = "none"
+                setPlaying(false);
             }, 1200);
         }
-    }, [filled, setLoading])
+    }, [filled, setLoading]);
 
     return (
         <section id='loader-screen'>
