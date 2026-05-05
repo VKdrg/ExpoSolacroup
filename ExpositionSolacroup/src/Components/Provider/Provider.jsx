@@ -13,7 +13,8 @@ export const AppProvider = ({ children }) => {
     const [chapters, setChapters] = useState({})
     const [playing, setPlaying] = useState(true)
     const [currentChapter, setCurrentChapter] = useState(1)
-    const [transition, setTransition] = useState(true)
+    const [playTransition, setPlayTransition] = useState(true)
+    const [audioURL, setAudioURL] = useState(``)
 
     useEffect(() => {
         setLoading(true)
@@ -24,7 +25,7 @@ export const AppProvider = ({ children }) => {
     }, [])
 
     return (
-        <AppContext.Provider value={{ chapters, playing, setPlaying, currentChapter, setCurrentChapter }}>
+        <AppContext.Provider value={{ chapters, playing, setPlaying, audioURL, currentChapter, setCurrentChapter }}>
             {children}
         </AppContext.Provider>
     )
