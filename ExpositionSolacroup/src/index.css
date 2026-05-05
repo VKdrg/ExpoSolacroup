@@ -72,7 +72,6 @@ a {
   text-decoration: none;
   color: var(--beige);
   font-size: 2rem;
-  /* line-height: 160%; */
   cursor: pointer;
 
   @media screen and (width<500px) {
