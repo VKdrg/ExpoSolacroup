@@ -72,7 +72,7 @@ a {
   text-decoration: none;
   color: var(--beige);
   font-size: 2rem;
-  line-height: 160%;
+  /* line-height: 160%; */
   cursor: pointer;
 
   @media screen and (width<500px) {
@@ -80,11 +80,21 @@ a {
   }
 }
 
-.btn {
+.btn-discover {
   background-color: var(--mid-blue);
   color: var(--beige);
   font-size: clamp(1.6rem, 1.4592rem + 0.4507vw, 2rem);
-  padding: 1.2rem 2.4rem;
+  padding: 1.6rem 3.2rem;
+  border: none;
+  border-radius: 32px;
+  width: fit-content;
+}
+
+.btn-next {
+  background-color: var(--mid-blue);
+  color: var(--beige);
+  font-size: clamp(1.6rem, 1.4592rem + 0.4507vw, 2rem);
+  padding: 1.6rem 3.2rem;
   border: none;
   border-radius: 32px;
   width: fit-content;
@@ -129,11 +139,11 @@ a {
 
 /* 
 
-button {
+.btn-next {
   z-index: 98;
-  text-orientation: sideways;
-
-} 
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+}
 
 .btndiv {
   width: 100%;
