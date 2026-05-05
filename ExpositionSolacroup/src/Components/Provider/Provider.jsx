@@ -12,6 +12,7 @@ export const AppProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const [chapters, setChapters] = useState({});
     const [playing, setPlaying] = useState(true);
+    const [playingTransition, setPlayingTransition] = useState(true);
     const [currentChapter, setCurrentChapter] = useState(1);
     const [playTransition, setPlayTransition] = useState(true);
     const [audioURL, setAudioURL] = useState(``);
@@ -25,7 +26,7 @@ export const AppProvider = ({ children }) => {
     }, []);
 
     return (
-        <AppContext.Provider value={{ chapters, playing, setPlaying, audioURL, currentChapter, setCurrentChapter }}>
+        <AppContext.Provider value={{ chapters, playing, setPlaying, playTransition, setPlayTransition, currentChapter, setCurrentChapter, audioURL, setAudioURL }}>
             {children}
         </AppContext.Provider>
     )
