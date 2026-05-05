@@ -1,14 +1,14 @@
-import { useEffect, useRef, useState } from "react"
-import { UseApplication } from "../../Components/Provider/Provider"
+import { useEffect, useRef, useState } from "react";
+import { UseApplication } from "../../Components/Provider/Provider";
 
-import "./ChapterDetail.css"
+import "./ChapterDetail.css";
 
 
 export const ChapterDetail = ({ setModal }) => {
-    const { chapters, currentChapter } = UseApplication()
+    const { chapters, currentChapter } = UseApplication();
 
     function handleClick() {
-        setModal(prev => !prev)
+        setModal(prev => !prev);
     }
 
     return (

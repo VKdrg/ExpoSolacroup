@@ -5,10 +5,10 @@ import { Link } from "react-router";
 import "./ChapterItem.css";
 
 export const ChapterItem = ({ setModal }) => {
-    const { chapters, currentChapter, setCurrentChapter } = UseApplication()
+    const { chapters, currentChapter, setCurrentChapter } = UseApplication();
 
     function handleDiscovery() {
-        setModal(prev => !prev)
+        setModal(prev => !prev);
     }
 
     return (

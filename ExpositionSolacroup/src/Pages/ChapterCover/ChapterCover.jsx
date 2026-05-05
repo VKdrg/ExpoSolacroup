@@ -1,11 +1,11 @@
-import { UseApplication } from '../../Components/Provider/Provider'
-import './ChapterCover.css'
+import { UseApplication } from '../../Components/Provider/Provider';
+import './ChapterCover.css';
 
 export const ChapterCover = ({ setCover }) => {
-    const { chapters, currentChapter } = UseApplication()
+    const { chapters, currentChapter } = UseApplication();
 
     function handleClick() {
-        setCover(prev => !prev)
+        setCover(prev => !prev);
     }
 
     return (

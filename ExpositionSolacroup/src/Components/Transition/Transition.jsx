@@ -1,18 +1,18 @@
-import "./Transition.css"
+import "./Transition.css";
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react";
 
 export const Transition = () => {
-    const transitionRef = useRef(null)
+    const transitionRef = useRef(null);
 
     useEffect(() => {
         const timer = setTimeout(() => {
             if (transitionRef.current) {
-                transitionRef.current.play()
+                transitionRef.current.play();
             }
-        }, 10000)
+        }, 10000);
 
-        return () => clearTimeout(timer)
+        return () => clearTimeout(timer);
     })
 
     return (
