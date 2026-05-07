@@ -13,6 +13,7 @@
     h3 {
         color: var(--dark-blue);
         margin-top: 0;
+        text-align: center;
     }
 
     a {

@@ -31,7 +31,11 @@ function DelayedVideo() {
 
 export const Home = () => {
 
-    const { playing, currentChapter } = UseApplication();
+    const { playing, setCurrentChapter, currentChapter } = UseApplication();
+
+    useEffect(() => {
+        setCurrentChapter(1)
+    }, [])
 
     return (
         <>

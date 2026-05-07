@@ -18,7 +18,6 @@ export const Chapter = () => {
         const chapter = id;
         
         if (chapter) {
-            setCurrentChapter(chapter-1);
             setCover(true);
             setModal(false);
         }

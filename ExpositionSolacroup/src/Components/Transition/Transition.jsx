@@ -1,21 +1,32 @@
+import { UseApplication } from "../Provider/Provider";
+import { useEffect, useRef } from "react";
+
 import "./Transition.css";
 
-import { useEffect, useRef } from "react";
 
 export const Transition = () => {
     const transitionRef = useRef(null);
+    const {playingTransition, setPlayingTransition} = UseApplication()
 
-    // useEffect(() => {
-    //     const timer = setTimeout(() => {
-    //         if (transitionRef.current) {
-    //             transitionRef.current.play();
-    //         }
-    //     }, 10000);
+    // makes video play
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            if (transitionRef.current) {
+                transitionRef.current.play();
+            }
+        }, 1);
 
-    //     return () => clearTimeout(timer);
-    // })
+        return () => clearTimeout(timer);
+    })
 
-    
+    // should hide video after delay
+    useEffect(() => {
+        setTimeout(() => {
+            setPlayingTransition(false)
+        }, 10000);
+    })
+
+    console.log('DAMN LA TRANSITION');
 
     return (
         <section id="transition">

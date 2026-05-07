@@ -9,13 +9,14 @@ export const UseApplication = () => {
 }
 
 export const AppProvider = ({ children }) => {
+    const [icon, setIcon] = useState('/SVG/logoLightReduced.svg');
     const [loading, setLoading] = useState(true);
     const [chapters, setChapters] = useState({});
     const [playing, setPlaying] = useState(true);
     const [playingTransition, setPlayingTransition] = useState(true);
     const [currentChapter, setCurrentChapter] = useState(1);
-    const [playTransition, setPlayTransition] = useState(true);
     const [audioURL, setAudioURL] = useState(``);
+    const [menuBurger, setMenuBurger] = useState(false);
 
     useEffect(() => {
         setLoading(true);
@@ -26,7 +27,7 @@ export const AppProvider = ({ children }) => {
     }, []);
 
     return (
-        <AppContext.Provider value={{ chapters, playing, setPlaying, playTransition, setPlayTransition, currentChapter, setCurrentChapter, audioURL, setAudioURL }}>
+        <AppContext.Provider value={{ icon, setIcon, menuBurger, setMenuBurger, chapters, playing, setPlaying, playingTransition, setPlayingTransition, currentChapter, setCurrentChapter, audioURL, setAudioURL }}>
             {children}
         </AppContext.Provider>
     )

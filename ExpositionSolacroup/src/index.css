@@ -81,6 +81,13 @@ a {
 
 .btn {
   z-index: 98;
+    background-color: var(--mid-blue);
+  color: var(--beige);
+  font-size: clamp(1.6rem, 1.4592rem + 0.4507vw, 2rem);
+  padding: 1.6rem 3.2rem;
+  border: none;
+  border-radius: 32px;
+  width: fit-content;
 }
 
 .btn-discover {
@@ -93,7 +100,7 @@ a {
   width: fit-content;
 }
 
-.btn-next, .btn-close {
+/* .btn-next, .btn-close {
   background-color: var(--mid-blue);
   color: var(--beige);
   font-size: clamp(1.6rem, 1.4592rem + 0.4507vw, 2rem);
@@ -101,7 +108,7 @@ a {
   border: none;
   border-radius: 32px;
   width: fit-content;
-}
+} */
 
 .btn:hover {
   background-color: #3B2FA480;

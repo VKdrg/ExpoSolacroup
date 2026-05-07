@@ -1,7 +1,18 @@
 import { Link } from "react-router";
+import { useEffect } from "react";
+import { UseApplication } from "../../Components/Provider/Provider";
+
 import "./Redirect.css";
+import '/src/index.css'
+
 
 export const Redirect = () => {
+
+    const { setCurrentChapter } = UseApplication()
+
+    useEffect(() => {
+        setCurrentChapter(1)
+    }, [])
 
     return (
         <section id="redirect-section">

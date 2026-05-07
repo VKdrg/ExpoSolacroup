@@ -3,11 +3,13 @@ import { Link, useLocation } from 'react-router';
 
 import '/src/index.css';
 import './Header.css';
+import { UseApplication } from '../Provider/Provider';
 
 
 
 export const Header = ({ triggerMenu }) => {
-    const [icon, setIcon] = useState('/SVG/logoLightReduced.svg');
+
+    const { icon, setIcon } = UseApplication()
     const location = useLocation();
 
     useEffect(() => {

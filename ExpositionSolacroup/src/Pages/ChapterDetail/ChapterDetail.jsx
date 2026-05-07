@@ -5,11 +5,16 @@ import "./ChapterDetail.css";
 
 
 export const ChapterDetail = ({ setModal }) => {
-    const { chapters, currentChapter } = UseApplication();
+    const { icon, setIcon, chapters, currentChapter } = UseApplication();
 
     function handleClick() {
         setModal(prev => !prev);
     }
+
+    useEffect(() => {
+        setIcon('/SVG/logoLightReduced.svg');
+        document.getElementById('menu').style.color = "var(--beige)";
+    }, [])
 
     return (
         <section id="chapter-detail">

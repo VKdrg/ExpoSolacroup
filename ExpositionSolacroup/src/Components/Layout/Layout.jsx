@@ -8,9 +8,7 @@ import { UseApplication } from '../Provider/Provider';
 
 export const Layout = () => {
 
-    const { chapters } = UseApplication();
-
-    const [menuBurger, setMenuBurger] = useState(false);
+    const { chapters, menuBurger, setMenuBurger } = UseApplication();
 
     function triggerMenu() {
         setMenuBurger(prev => !prev);
